@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.dashboardController">
+    <children>
+        <VBox spacing="20" style="-fx-background-color:#F4F8FC; -fx-padding:20;" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+            <HBox alignment="CENTER_RIGHT" spacing="15">
+
+                <children>
+
+                    <Label alignment="CENTER" maxWidth="Infinity" style="-fx-text-fill:#1E3A8A;                       -fx-font-size:30;                       -fx-font-weight:bold;" text="Admin Dashboard" HBox.hgrow="ALWAYS" />
+
+                    <Button fx:id="btnlogout" onAction="#logout" prefHeight="38" prefWidth="110" style="-fx-background-color:#EF4444;                        -fx-text-fill:white;                        -fx-background-radius:8;                        -fx-font-weight:bold;" text="Logout" />
+
+                </children>
+
+            </HBox>
+            <GridPane hgap="20" vgap="20">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="33.3" />
+                    <ColumnConstraints percentWidth="33.3" />
+                    <ColumnConstraints percentWidth="33.3" />
+                </columnConstraints>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label style="-fx-font-size:42;" text="🏠" />
+                    <Button fx:id="btnaddprop" onAction="#addprop" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="Add Property" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label style="-fx-font-size:42;" text="🤝" />
+                    <Button fx:id="btnadddeal" onAction="#adddeal" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="Manage Deal" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Label style="-fx-font-size:42;" text="🏢" />
+                    <Button fx:id="btnviewprop" onAction="#viewprop" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="View Properties" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label style="-fx-font-size:42;" text="📋" />
+                    <Button fx:id="btnviewdeals" onAction="#viewdeals" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="View Deals" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label style="-fx-font-size:42;" text="👥" />
+                    <Button fx:id="btnviewcustomers" onAction="#viewcustomers" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="View Customers" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Label style="-fx-font-size:42;" text="👤" />
+                    <Button fx:id="btnmanagecustomers" onAction="#managecustomers" prefWidth="170" style="-fx-background-color:#2563EB;-fx-text-fill:white;-fx-background-radius:10;-fx-font-weight:bold;" text="Manage Customer" />
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="170" prefWidth="280" spacing="18" style="-fx-background-color:white;-fx-background-radius:16;-fx-border-color:#4A90E2;-fx-border-radius:16;-fx-border-width:2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <Label style="-fx-font-size:42;" text="📊" />
+               <Button fx:id="btnanalytics" onAction="#analyticsdata" prefWidth="170" style="-fx-background-color:#DBEAFE;-fx-text-fill:#1D4ED8;-fx-background-radius:10;-fx-font-weight:bold;" text="Analytics" />
+                </VBox>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+        </VBox>
+    </children>
+</AnchorPane>

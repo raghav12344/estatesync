@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1200.0" style="-fx-background-color:#F4F8FF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="analytics.analyticsController">
+
+
+    <children>
+
+
+        <!-- Header -->
+
+        <AnchorPane prefHeight="80" prefWidth="1200" style="-fx-background-color:linear-gradient(to right,#1767FF,#0A4ED9);">
+
+            <children>
+
+                <Label layoutX="350" layoutY="22" style="                        -fx-text-fill:white;                        -fx-font-size:30px;                        -fx-font-weight:bold;" text="📊 Property Analytics Dashboard" />
+
+            </children>
+
+        </AnchorPane>
+
+
+
+        <!-- Charts Container -->
+
+
+        <GridPane hgap="40" layoutX="40" layoutY="120" vgap="40">
+
+
+            <!-- Customer Type -->
+
+            <VBox alignment="CENTER" prefHeight="280" prefWidth="500" spacing="10" style="                   -fx-background-color:white;                   -fx-background-radius:20;                   -fx-effect:dropshadow(gaussian,gray,10,0,0,3);" GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+
+                <Label style="                        -fx-font-size:20px;                        -fx-font-weight:bold;                        -fx-text-fill:#1767FF;" text="Customer Types" />
+
+
+                <PieChart fx:id="customerChart" prefHeight="220" prefWidth="400" />
+
+
+            </VBox>
+
+
+
+            <!-- Property Type -->
+
+
+            <VBox alignment="CENTER" prefHeight="280" prefWidth="500" spacing="10" style="                   -fx-background-color:white;                   -fx-background-radius:20;                   -fx-effect:dropshadow(gaussian,gray,10,0,0,3);" GridPane.columnIndex="1" GridPane.rowIndex="0">
+
+
+                <Label style="                        -fx-font-size:20px;                        -fx-font-weight:bold;                        -fx-text-fill:#1767FF;" text="Property Types" />
+
+
+                <PieChart fx:id="propertyTypeChart" prefHeight="220" prefWidth="400" />
+
+
+            </VBox>
+
+
+
+
+            <!-- Structure -->
+
+
+            <VBox alignment="CENTER" prefHeight="280" prefWidth="500" spacing="10" style="                   -fx-background-color:white;                   -fx-background-radius:20;                   -fx-effect:dropshadow(gaussian,gray,10,0,0,3);" GridPane.columnIndex="0" GridPane.rowIndex="1">
+
+
+                <Label style="                        -fx-font-size:20px;                        -fx-font-weight:bold;                        -fx-text-fill:#1767FF;" text="Property Structure" />
+
+
+                <PieChart fx:id="structureChart" prefHeight="220" prefWidth="400" />
+
+
+            </VBox>
+
+
+
+
+            <!-- Deals -->
+
+
+            <VBox alignment="CENTER" prefHeight="280" prefWidth="500" spacing="10" style="                   -fx-background-color:white;                   -fx-background-radius:20;                   -fx-effect:dropshadow(gaussian,gray,10,0,0,3);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+
+                <Label style="                        -fx-font-size:20px;                        -fx-font-weight:bold;                        -fx-text-fill:#1767FF;" text="Deal Status" />
+
+
+                <PieChart fx:id="dealChart" prefHeight="220" prefWidth="400" />
+
+
+            </VBox>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+
+
+        </GridPane>
+
+
+
+    </children>
+
+</AnchorPane>

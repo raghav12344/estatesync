@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1200.0" style="-fx-background-color:#F4F8FF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="propertyFinder.propertyFinderController">
+
+    <children>
+
+        <VBox prefHeight="760" prefWidth="1200" spacing="20">
+
+            <children>
+
+                <AnchorPane prefHeight="70" style="-fx-background-color: linear-gradient(to right,#1767FF,#0A4ED9);">
+
+                    <children>
+                        <Label layoutX="430" layoutY="18" style="-fx-text-fill:white;-fx-font-size:28px;-fx-font-weight:bold;" text="🏠 Property Finder" />
+                    </children>
+                </AnchorPane>
+
+                <VBox spacing="20" style="-fx-background-color:white;                              -fx-background-radius:20;                              -fx-border-radius:20;                              -fx-border-color:#1767FF;                              -fx-effect:dropshadow(gaussian,rgba(0,0,0,.18),12,0,0,3);">
+
+                    <padding>
+                        <Insets bottom="20" left="20" right="20" top="20" />
+                    </padding>
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <Label text="City" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbCity" prefWidth="180" promptText="Select City" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Label text="Area" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbArea" prefWidth="180" promptText="Select Area" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Property Type" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbType" prefWidth="180" promptText="Property Type" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                        <Label text="Structure" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbStructure" prefWidth="180" promptText="Structure" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                        <Label text="Min Price" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtMin" prefWidth="150" promptText="₹ Minimum" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+                        <Label text="Max Price" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtMax" prefWidth="150" promptText="₹ Maximum" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                    <HBox alignment="CENTER">
+                        <Button fx:id="btnFind" onAction="#findProperties" prefHeight="42" prefWidth="230" style="-fx-background-color:#1767FF;                                        -fx-text-fill:white;                                        -fx-font-size:16;                                        -fx-font-weight:bold;                                        -fx-background-radius:18;" text="🔍 Find &amp; Show" />
+                    </HBox>
+
+                    <TableView fx:id="table" VBox.vgrow="ALWAYS" />
+
+                    <HBox alignment="CENTER">
+                        <Button fx:id="btnPdf" onAction="#createPdf" prefHeight="42" prefWidth="220" style="-fx-background-color:white;                                        -fx-border-color:#1767FF;                                        -fx-border-width:2;                                        -fx-text-fill:#1767FF;                                        -fx-font-size:16;                                        -fx-font-weight:bold;                                        -fx-background-radius:18;                                        -fx-border-radius:18;" text="📄 Create PDF" />
+                    </HBox>
+
+                </VBox>
+
+            </children>
+
+            <padding>
+                <Insets bottom="20" left="25" right="25" top="15" />
+            </padding>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
