@@ -244,7 +244,7 @@ public class dealsFinderController {
             s="Completed";
         }
         else if(pending.isSelected()){
-            s="In Progress";
+            s="Pending";
         }
         try{
             PreparedStatement pst=con.prepareStatement("select * from deals where status=? AND dtofreg>=?");

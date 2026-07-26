@@ -112,7 +112,7 @@ public class dealsController {
                 if(status.equals("Completed")){
                     radiocompleted.setSelected(true);
                 }
-                else if(status.equals("In Progress")){
+                else if(status.equals("Pending")){
                     radioongoing.setSelected(true);
                 }
                 else if(status.equals("Cancelled")){
@@ -158,7 +158,7 @@ public class dealsController {
                 deleteoncomplete();
             }
             else if(radioongoing.isSelected())
-                Status="In Progress";
+                Status="Pending";
             pst.setString(12,Status);
             pst.setInt(13,Integer.parseInt(propid.getText()));
             pst.executeUpdate();
@@ -199,8 +199,9 @@ public class dealsController {
                 Status = "Completed";
                 deleteoncomplete();
             }
-            else if(radioongoing.isSelected())
-                Status="In Progress";
+            else if(radioongoing.isSelected()) {
+                Status = "Pending";
+            }
             pst.setString(13,Status);
             pst.executeUpdate();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -209,6 +210,7 @@ public class dealsController {
             alert.showAndWait();
         }
         catch(Exception e){
+            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("ERROR");
             alert.setContentText("Oops! Something went wrong");
@@ -217,7 +219,7 @@ public class dealsController {
     }
     void deleteoncancel(){
         try{
-            PreparedStatement pst=con.prepareStatement("delete from deals where rid=?");
+            PreparedStatement pst=con.prepareStatement("delete from deals where pid=?");
             pst.setInt(1, Integer.parseInt(propid.getText()));
             pst.executeUpdate();
         }
