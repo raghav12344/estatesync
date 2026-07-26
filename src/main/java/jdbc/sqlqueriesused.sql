@@ -1,0 +1,10 @@
+create database javaproject;
+use javaproject;
+create table customers(mobile varchar(12) primary key,cname varchar(100),address varchar(200),city varchar(30),email varchar(30),ctype varchar(10),pic mediumblob,acard MEDIUMBLOB,doe date);
+create table properties(rid int auto_increment primary key,mobile varchar(12),location varchar(200),area varchar(200),city varchar(30),size float,front float,rear float,leftside float,rightside float,facing varchar(30),proptype varchar(15),consttype varchar(15),approvedby varchar(200),price varchar(20),otherinfo varchar(200),pic1 mediumblob,pic2 mediumblob,constraint fk_customerProperties foreign key(mobile) references customers(mobile));
+create table deals(pid int primary key,seller varchar(100),sellercontact varchar(12),buyer varchar(100),buyercontact varchar(12),finalamount varchar(20),dowmpmt varchar(20),dtofdeal date,dtofreg date,totalcom varchar(20),adv varchar(20),bal varchar(20),status varchar(10));
+select * from properties;
+select * from customers;
+select * from deals;
+drop table customers;
+drop table properties;
