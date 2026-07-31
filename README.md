@@ -12,7 +12,7 @@ Watch the working demo and feature walkthrough of EstateSync:
 
 [![EstateSync Demo Video](https://img.shields.io/badge/Watch_Demo-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](YOUR_GOOGLE_DRIVE_LINK_HERE)
 
-*(Replace `(https://drive.google.com/file/d/1QX8Yk3TRVe9T7NRysy_X040YGXCTtX68/view?usp=sharing)` with your actual Google Drive video link)*
+*(https://drive.google.com/file/d/1QX8Yk3TRVe9T7NRysy_X040YGXCTtX68/view?usp=sharing)*
 
 ---
 
