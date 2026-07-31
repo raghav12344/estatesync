@@ -93,6 +93,5 @@ Contributions are welcome! Feel free to open an issue or submit a pull request i
 ## 👤 Author
 
 **Raghav Gupta**
-
--GitHub: @raghav12344
--LinkedIn: Raghav Gupta
+- **GitHub:** [@raghav12344](https://github.com/raghav12344)
+- **LinkedIn:** [Raghav Gupta](https://linkedin.com/in/raghav-gupta1233)
